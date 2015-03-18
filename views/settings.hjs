@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
+		<link rel="icon" type="image/png" href="{{ favicon }}" />
+		<link rel="stylesheet" type="text/css" href="/css/ratchet.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/ratchet-theme-ios.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+		<script type="text/javascript" src="/js/ratchet.min.js"></script>
+	</head>
+	<body>
+		<header class="bar bar-nav">
+			<h1 class="title">{{ title }}</h1>
+		</header>
+		<nav class="bar bar-tab">
+			<a class="tab-item" onclick="window.location.href = '/';">
+				<span class="icon ion-ios-paper-outline"></span>
+				<span class="tab-label">Articles</span>
+			</a>
+			<a class="tab-item" onclick="window.location.href = '/hubs';">
+				<span class="icon ion-ios-keypad-outline"></span>
+				<span class="tab-label">Hubs</span>
+			</a>
+			<a class="tab-item active">
+				<span class="icon ion-ios-settings-strong"></span>
+				<span class="tab-label">Settings</span>
+			</a>
+		</nav>
+		<div class="content">
+			<from class="input-group">
+				<div class="input-row">
+					<label>Font</label>
+					<select>
+						<option value="arial">Arial</option>
+						<option value="helvetica">Helvetica</option>
+						<option value="cursive">Cursive</option>
+						<option value="georgia">Georgia</option>
+					</select>
+				</div>
+			</from>
+		</div>
+	</body>
+</html>

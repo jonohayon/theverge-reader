@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
+		<link rel="icon" type="image/png" href="https://cdn2.vox-cdn.com/community_logos/34086/verge-fv.png" />
+		<link rel="stylesheet" type="text/css" href="/css/ratchet.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/ratchet-theme-ios.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+		<script type="text/javascript" src="/js/ratchet.min.js"></script>
+	</head>
+	<body>
+		<header class="bar bar-nav">
+			<button class="btn btn-link btn-nav pull-right" onclick="window.location.reload();">
+				<span class="icon icon-refresh"></span>
+			</button>
+			<h1 class="title">{{ title }}</h1>
+		</header>
+		<nav class="bar bar-tab">
+			<a class="tab-item active">
+				<span class="icon ion-ios-paper"></span>
+				<span class="tab-label">Articles</span>
+			</a>
+			<a class="tab-item" onclick="window.location.href = '/hubs';">
+				<span class="icon ion-ios-keypad-outline"></span>
+				<span class="tab-label">Hubs</span>
+			</a>
+			<!--<a class="tab-item" onclick="window.location.href = '/settings';">-->
+			<!--	<span class="icon ion-ios-settings"></span>-->
+			<!--	<span class="tab-label">Settings</span>-->
+			<!--</a>-->
+		</nav>
+		<div class="content">
+			<ul class="table-view">
+				{{#posts}}
+					<li class="table-view-cell media" onclick="window.location.href = '/viewPost?title={{ post_title }}&src={{ post_url }}&path=/';">
+						<a class="navigate-right" data-transition="fade-in">
+							<div class="media-body">
+								{{ post_title }}
+								<p>Last updated: {{ post_update }} | By {{ post_author }}</p>
+							</div>
+						</a>
+					</li>
+				{{/posts}}
+			</ul>
+		</div>
+	</body>
+</html>
